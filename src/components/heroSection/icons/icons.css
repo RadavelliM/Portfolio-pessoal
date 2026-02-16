@@ -1,0 +1,25 @@
+
+.icons {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    gap: 25px;
+
+    text-align: center;
+    color: white;
+}
+
+.icons a {
+    font-size: 40px;
+    transition: 500ms;
+    display: inline-block;
+}
+
+.icons a:hover {
+    color: aqua;
+    transform: translateY(-3px);
+}

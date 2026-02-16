@@ -1,0 +1,14 @@
+.arrow {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    gap: 25px;
+    font-size: 30px;
+    text-align: center;
+    color: #f71726;
+    cursor: pointer;
+}

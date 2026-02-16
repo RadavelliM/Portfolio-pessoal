@@ -1,0 +1,50 @@
+:root {
+    --navbarBG: rgb(42, 42, 42);
+    --letterColor: white;
+}
+
+nav {
+    background-color: var(--navbarBG);
+    color: var(--letterColor);
+    box-shadow: 0 0 10px black;
+
+    width: calc(100% - 2px);
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgb(0, 135, 135);
+    transition: 600ms;
+
+
+}
+
+nav:hover {
+    border: 1px solid rgba(0, 255, 255, 0.999);
+}
+
+nav .brand {
+    margin-left: 20px;
+    color: aqua;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    transition: 500ms;
+    cursor: pointer;
+}
+nav .brand:hover {
+    color: rgb(0, 170, 170)
+}
+
+.navActions a {
+    margin-right: 30px;
+    color: #f3737c;
+    transition: 400ms;
+    display: inline-block;
+}
+
+.navActions a:hover {
+    color: #ad5158;
+    transform: translateY(-3px);
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './navbar.css'
-import Actions from '../actions/actions'
+import Actions from '../../common/actions/actions'
 
 
 export default function Navbar() {

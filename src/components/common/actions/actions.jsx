@@ -1,6 +1,5 @@
 import React from 'react'
 
-import '../nav/navbar.css'
 import  Div  from './styledActions';
 
 const navItems = [

@@ -2,7 +2,7 @@ import React from 'react'
 
 import './footer.css'
 import Icons from '../heroSection/icons/icons'
-import Actions from '../navbar/actions/actions'
+import Actions from '../common/actions/actions'
 
 
 function currentYear() {

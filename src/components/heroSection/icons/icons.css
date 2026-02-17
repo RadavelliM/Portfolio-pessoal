@@ -23,3 +23,27 @@
     color: aqua;
     transform: translateY(-3px);
 }
+
+.iconsFooter {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    gap: 25px;
+
+    text-align: center;
+    color: white;
+}
+
+.iconsFooter a {
+    font-size: 40px;
+    transition: 500ms;
+    display: inline-block;
+}
+
+.iconsFooter a:hover {
+    transform: translateY(-3px);
+}

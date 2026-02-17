@@ -4,7 +4,6 @@ import './footer.css'
 import Icons from '../heroSection/icons/icons'
 import Actions from '../common/actions/actions'
 
-
 function currentYear() {
     const data = new Date()
     return data.getFullYear()
@@ -14,7 +13,7 @@ export default function Footer() {
     return (
         <footer>
 
-            <Icons />
+            <Icons isFooter={true}/>
 
             <Actions isNav={false}/>
 

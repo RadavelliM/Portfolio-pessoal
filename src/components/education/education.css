@@ -1,0 +1,21 @@
+:root {
+    --graduationBG: rgb(59, 59, 59);
+    --iconBG: rgb(42, 42, 42);
+    --letterColor: white;
+}
+
+.education {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.education h4 {
+    color: rgb(168, 168, 168);
+}
+
+.educationInfo {
+    font-size: 21px;
+    margin-bottom: 100px;
+}

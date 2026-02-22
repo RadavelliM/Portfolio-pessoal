@@ -1,0 +1,23 @@
+.about {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    max-height: 100vh;
+}
+
+.about h1 {
+    margin-bottom: 70px;
+}
+
+
+.about h4 {
+    color: rgb(168, 168, 168);
+    width: 55%;
+    display: grid;
+    place-self: center;
+    line-height: 40px;
+    font-size: 22px;
+    margin-bottom: 50px;
+}

@@ -11,4 +11,9 @@
     text-align: center;
     color: #f71726;
     cursor: pointer;
+    transition: 0.6s;
+}
+
+.arrow:hover {
+    color: #ad5158;
 }

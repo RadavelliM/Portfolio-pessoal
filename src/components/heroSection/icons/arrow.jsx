@@ -15,7 +15,7 @@ export default function ArrowDown() {
                 ease: "easeInOut"
             }}
             >
-            <FiArrowDown onClick={() => window.location.href = "#techStack"} />
+            <FiArrowDown onClick={() => window.location.href = "#about"} />
         </motion.div>
     )
 };

@@ -5,8 +5,7 @@ import  Div  from './styledActions';
 const navItems = [
   { label: "Início", href: "#home" },
   { label: "Sobre", href: "#about" },
-  { label: "Formação", href: "#graduation" },
-  { label: "Projetos", href: "#projects" },
+  { label: "Formação", href: "#education" },
   { label: "Stack", href: "#techStack" }
 ];
 

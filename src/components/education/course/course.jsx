@@ -42,7 +42,7 @@ const coursesInfo = [
 export default function Courses() {
     return (
         <div className="coursesInfo">
-            <h1>Cursos</h1>
+            <h1>Cursos Complementares</h1>
 
             <div className="courses">
                 {coursesInfo.map((info, index) => (

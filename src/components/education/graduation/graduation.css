@@ -4,42 +4,36 @@
     --letterColor: white;
 }
 
+.graduation {
+    text-align: center;
+    color: var(--letterColor);
+}
+
 .graduationIcon {
     color: aqua;
     background-color: var(--iconBG);
     padding: 5px;
     border-radius: 7px;
-    position: relative;
-}
-
-
-.graduationInfo p span {
-    position: absolute;
-    margin-left: -50px;
-    margin-top: -5px;
-}
-
-.graduationInfo p a {
-    color: rgb(168, 168, 168);
-    font-size: 30px;
-    display: inline-block;
-    transition: 0.4s;
-}
-
-.graduationInfo p a:hover {
-    color: grey;
+    font-size: 22px;
+    flex-shrink: 0;
 }
 
 .graduationInfo {
     clip-path: polygon(10% 0%, 100% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 100%, 0% 10%);
     width: 600px;
     height: 500px;
-    display: grid;
-    place-self: center;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
     background-color: var(--graduationBG);
     position: relative;
-    gap: 1px;
     color: white;
+    padding: 20px;
 }
 
 .graduationInfo::before {
@@ -49,6 +43,7 @@
     inset: 0;
     background: rgb(0, 135, 135);
     transition: 0.6s;
+    z-index: 0;
 }
 
 .graduationInfo::after {
@@ -57,6 +52,7 @@
     position: absolute;
     inset: 2px;
     background: var(--graduationBG);
+    z-index: 1;
 }
 
 .graduationInfo > * {
@@ -68,7 +64,28 @@
     background: aqua;
 }
 
+.graduationInfo p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.graduationInfo p a {
+    color: rgb(168, 168, 168);
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.graduationInfo p a:hover {
+    color: grey;
+}
 
 @media (max-width: 730px) {
     .graduationInfo {
@@ -76,12 +93,8 @@
         border-radius: 20px;
         width: 90%;
     }
-    .graduationInfo::before {
-        content: "";
-        border-radius: 20px;
-    }
+    .graduationInfo::before,
     .graduationInfo::after {
-        content: "";
         border-radius: 20px;
     }
 }

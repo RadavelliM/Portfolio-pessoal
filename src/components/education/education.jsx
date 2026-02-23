@@ -8,7 +8,7 @@ import DivisorSpace from '../common/divisorSpace/divisorSpace'
 
 export default function Education() {
     return (
-        <div className="education">
+        <div id='education' className="education">
 
             <h1>Formações Acadêmicas</h1>
 

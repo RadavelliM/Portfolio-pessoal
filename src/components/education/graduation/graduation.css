@@ -1,3 +1,9 @@
+:root {
+    --graduationBG: rgb(59, 59, 59);
+    --iconBG: rgb(42, 42, 42);
+    --letterColor: white;
+}
+
 .graduationIcon {
     color: aqua;
     background-color: var(--iconBG);
@@ -5,6 +11,7 @@
     border-radius: 7px;
     position: relative;
 }
+
 
 .graduationInfo p span {
     position: absolute;
@@ -64,15 +71,16 @@
 
 
 @media (max-width: 730px) {
-    .graduation {
+    .graduationInfo {
         clip-path: none;
         border-radius: 20px;
+        width: 90%;
     }
-    .graduation::before {
+    .graduationInfo::before {
         content: "";
         border-radius: 20px;
     }
-    .graduation::after {
+    .graduationInfo::after {
         content: "";
         border-radius: 20px;
     }

@@ -47,7 +47,7 @@ export default function TechStack() {
             <div className="techIntroduction">
                 <h1>Habilidades & Tecnologias</h1>
                 <h4>Conjunto de tecnologias e ferramentas que utilizo para desenvolver
-        aplicações modernas, escaláveis e de alta performance.</h4>
+                aplicações modernas, escaláveis e de alta performance.</h4>
             </div>
 
             <div className="stack">
@@ -58,7 +58,7 @@ export default function TechStack() {
 
                 <div className="frontend tech">
                     <div className="techHeader">
-                        <LuCode />
+                        <LuCode className='graduationIcon' />
                         <h3>Frontend</h3>
                     </div>
                     {frontend.map(tech => (
@@ -68,7 +68,7 @@ export default function TechStack() {
 
                 <div className="backend tech">
                     <div className="techHeader">
-                        <LuComputer />
+                        <LuComputer className='graduationIcon' />
                         <h3>Backend</h3>
                     </div>
                     {backend.map(tech => (
@@ -78,7 +78,7 @@ export default function TechStack() {
 
                 <div className="databases tech">
                     <div className="techHeader">
-                        <FaDatabase />
+                        <FaDatabase className='graduationIcon' />
                         <h3>Bancos de Dados</h3>
                     </div>
                     {databases.map(tech => (
@@ -92,7 +92,7 @@ export default function TechStack() {
 
                 <div className="tools tech">
                     <div className="techHeader">
-                        <FaTools />
+                        <FaTools className='graduationIcon' />
                         <h3>Ferramentas</h3>
                     </div>
                     {tools.map(tech => (
@@ -102,7 +102,7 @@ export default function TechStack() {
 
                 <div className="platforms tech">
                     <div className="techHeader">
-                        <FaServer />
+                        <FaServer className='graduationIcon' />
                         <h3>Plataformas</h3>
                     </div>
                     {platforms.map(tech => (
@@ -112,7 +112,7 @@ export default function TechStack() {
 
                 <div className="deployVers tech">
                     <div className="techHeader">
-                        <LuSettings />
+                        <LuSettings className='graduationIcon' />
                         <h3>Deploy & Versionamento</h3>
                     </div>
                     {deployVers.map(tech => (

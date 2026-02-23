@@ -21,7 +21,7 @@
 
 .icons a:hover {
     color: aqua;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 .iconsFooter {
@@ -45,5 +45,5 @@
 }
 
 .iconsFooter a:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }

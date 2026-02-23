@@ -3,6 +3,8 @@ import React from 'react'
 
 import './education.css'
 import Graduation from './graduation/graduation'
+import Courses from './course/course'
+import DivisorSpace from '../common/divisorSpace/divisorSpace'
 
 export default function Education() {
     return (
@@ -15,6 +17,8 @@ export default function Education() {
             </div>
 
             <Graduation />
+            <DivisorSpace space="100px"/>
+            <Courses />
         </div>
     )
 };

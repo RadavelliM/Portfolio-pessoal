@@ -16,9 +16,9 @@ export default function App() {
             <HeroSection />
             <DivisorSpace space="200px"/>
             <About />
-            <DivisorSpace space="100px"/>
+            <DivisorSpace space="200px"/>
             <Education />
-            <DivisorSpace space="300px"/>
+            <DivisorSpace space="400px"/>
             <TechStack />
             <DivisorSpace space="350px"/>
             <Footer />

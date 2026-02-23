@@ -1,44 +1,46 @@
 import React from 'react'
 
-import { FaGraduationCap, FaBook, FaUniversity } from 'react-icons/fa'
+import { FaGraduationCap, FaUniversity } from 'react-icons/fa'
 import { AiFillCalendar } from 'react-icons/ai'
 
 import './graduation.css'
 
+const graduationInfos = [
+
+    {img: <FaGraduationCap className='graduationIcon' />,
+        title: "Título: ",
+        link: "https://seja.univille.br/curso/presencial/engenharia-de-software/",
+        txt: "Bacharelado em Engenharia de Software"},
 
 
+    {img: <FaUniversity className='graduationIcon' />,
+        title: "Instituição: ",
+        link: "https://seja.univille.br/",
+        txt: "Univille"},
 
+    {img: <AiFillCalendar className='graduationIcon' />,
+        title: "Início: ",
+        txt: "2025"},
+
+    {img: <AiFillCalendar className='graduationIcon' />,
+        title: "Previsão de conclusão: ",
+        txt: "2029"}
+]
 
 export default function Graduation() {
     return (
         <div className="graduation">
             <h1>Graduação</h1>
 
-
             <div className="graduationInfo">
-                <p>
-                    <span><FaGraduationCap className='graduationIcon' /></span>
-                    Título:
-                    <a href="https://seja.univille.br/curso/presencial/engenharia-de-software/" target='_blank'>
-                    Bacharelado em Engenharia de Software</a>
-                </p>
-
-                <p>
-                    <span><FaUniversity className='graduationIcon' /></span>
-                    Instituição: <a href="https://seja.univille.br/" target='_blank'>Univille</a>
-                </p>
-
-                <p>
-                    <span><AiFillCalendar className='graduationIcon' /></span>
-                    Início: 2025
-                </p>
-
-                <p>
-                    <span><AiFillCalendar className='graduationIcon' /></span>
-                    Previsão de conclusão: 2029
-                </p>
+                {graduationInfos.map((info, index) => (
+                    <p key={index}>
+                        <span>{info.img}</span>
+                        {info.title}
+                        {info.link ? <a href={info.link} target='_blank'>{info.txt}</a> : info.txt}
+                    </p>
+                ))}
             </div>
-
         </div>
     )
 };

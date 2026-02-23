@@ -18,7 +18,7 @@ export default function Footer() {
             <Actions isNav={false}/>
 
             <div className="msg">
-                <h3 className='rights'>Henrique Radavelli Machado. Todos os direitos reservados - {currentYear()}</h3>
+                <h3 className='rights'>Henrique Radavelli Machado - {currentYear()}</h3>
             </div>
 
 

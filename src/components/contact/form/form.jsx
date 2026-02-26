@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
+
 import { AiOutlineSend } from 'react-icons/ai'
 import { LuSend } from 'react-icons/lu'
 import styles from './form.module.css'
@@ -10,7 +12,11 @@ const formInfo = [
 
 export default function Form() {
     return (
-        <form action="">
+        <motion.form
+            initial={{opacity: 0, x: -40}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{delay: 1, duration: 1}}
+        action="">
 
             <div className={styles.formInput}>
                 <input required type="text" id='name' placeholder='' name='name' />
@@ -36,6 +42,7 @@ export default function Form() {
                 <button id={styles.formSubmit} type='submit'> <LuSend className={styles.formIcon} /> Enviar Menssagem</button>
             </div>
 
-        </form>
+
+        </motion.form>
     )
 };

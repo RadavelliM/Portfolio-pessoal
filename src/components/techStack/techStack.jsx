@@ -1,4 +1,7 @@
 import React from 'react'
+
+import { motion } from 'framer-motion'
+
 import { LuCode, LuServer, LuComputer, LuSettings } from 'react-icons/lu'
 import { FaServer, FaDatabase, FaTools } from 'react-icons/fa'
 
@@ -45,15 +48,29 @@ export default function TechStack() {
         <div id='techStack' className="techStack">
 
             <div className="techIntroduction">
-                <h1>Habilidades & Tecnologias</h1>
-                <h4>Conjunto de tecnologias e ferramentas que utilizo para desenvolver
-                aplicações modernas, escaláveis e de alta performance.</h4>
+                <motion.h1
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0.5, duration: 2}}
+                >Habilidades & Tecnologias</motion.h1>
+
+                <motion.h4
+                    initial={{opacity: 0, y: -40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{delay: 1, duration: 2}}
+                >Conjunto de tecnologias e ferramentas que utilizo para desenvolver
+                aplicações modernas, escaláveis e de alta performance.</motion.h4>
             </div>
 
-            <div className="stack">
+            <div
+                className="stack">
 
                 <div className="sectionMessage">
-                    <h2>Desenvolvimento de Aplicações</h2>
+                    <motion.h2
+                        initial={{opacity: 0}}
+                        whileInView={{opacity: 1}}
+                        transition={{delay: 1, duration: 2}}
+                    >Desenvolvimento de Aplicações</motion.h2>
                 </div>
 
                 <div className="frontend tech">
@@ -110,7 +127,8 @@ export default function TechStack() {
                     ))}
                 </div>
 
-                <div className="deployVers tech">
+                <div
+                className="deployVers tech">
                     <div className="techHeader">
                         <LuSettings className='graduationIcon' />
                         <h3>Deploy & Versionamento</h3>

@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { motion } from 'framer-motion';
+
 import { FaBook, FaBookOpen, FaCertificate } from 'react-icons/fa';
 import { LuComputer } from 'react-icons/lu';
 
@@ -32,11 +35,22 @@ export default function Courses() {
 
     return (
         <div className={styles.coursesInfo}>
-            <h1>Cursos Complementares</h1>
+            <motion.h1
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{delay: 0.5, duration: 2}}
+            > Cursos Complementares
+            </motion.h1>
 
-            <div className={styles.courses}>
+            <motion.div
+                initial={{opacity: 0, y: -40}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{delay: 1, duration: 2}}
+                className={styles.courses}>
+
                 {coursesInfo.map((info, index) => (
-                    <div key={index} className={styles.courseBox}>
+                    <motion.div
+                     key={index} className={styles.courseBox}>
 
                         <p>
                             <span className={styles.first}><FaBook className={iconClass} /></span>
@@ -66,9 +80,9 @@ export default function Courses() {
                                 </span>
                             </p>
                         )}
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 }

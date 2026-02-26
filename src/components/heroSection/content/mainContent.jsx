@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
 import Digital from '../../../assets/digital.png';
 import './mainContent.css';
 
@@ -22,19 +24,32 @@ export default function MainContent() {
             <img src={Digital} alt="" />
 
             <div className="starterText">
-                <h1> {"<"} <span>{titles[index]}</span> {"/>"}</h1>
+                <motion.h1
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0.5, duration: 3}}
+                > {"<"} <span>{titles[index]}</span> {"/>"}</motion.h1>
             </div>
 
             <div className="mainText">
-                <h1>Bem Vindo(a)! Eu sou <span>Henrique Radavelli</span></h1>
+                <motion.h1
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0.5, duration: 7}}
+                >Bem Vindo(a)! Eu sou <span>Henrique Radavelli</span></motion.h1>
             </div>
 
-            <div className="mainContentText">
+            <motion.div
+                initial={{opacity: 0, top: "61%"}}
+                whileInView={{opacity: 1, top: "51%"}}
+                transition={{delay: 0.5, duration: 2}}
+
+                className="mainContentText">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Molestiae fugiat laboriosam quam, minima pariatur illum quaerat,
                 ea assumenda consequuntur doloribus quibusdam adipisci error modi
                 aspernatur odit voluptas, amet blanditiis maxime!</p>
-            </div>
+            </motion.div>
         </div>
     );
 }

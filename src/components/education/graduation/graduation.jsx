@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { motion, translateAxis } from 'framer-motion'
+
 import { FaGraduationCap, FaUniversity } from 'react-icons/fa'
 import { AiFillCalendar } from 'react-icons/ai'
 
@@ -30,9 +32,21 @@ const graduationInfos = [
 export default function Graduation() {
     return (
         <div className={styles.graduation}>
-            <h1>Graduação</h1>
+            <motion.h1
+                initial={{opacity: 0}}
 
-            <div className={styles.graduationInfo}>
+                whileInView={{opacity: 1}}
+                transition={{delay: 1.5, duration: 2}}
+            >
+                Graduação
+            </motion.h1>
+
+            <motion.div
+                className={styles.graduationInfo}
+                initial={{translateY: "25%", opacity: 0}}
+                whileInView={{translateY: "0%", opacity: 1}}
+                transition={{delay: 0.5, duration: 2}}
+            >
                 {graduationInfos.map((info, index) => (
                     <p key={index}>
                         <span>{info.img}</span>
@@ -40,7 +54,7 @@ export default function Graduation() {
                         {info.link ? <a href={info.link} target='_blank'>{info.txt}</a> : info.txt}
                     </p>
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 };

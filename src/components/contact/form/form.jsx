@@ -7,7 +7,10 @@ import { LuSend } from 'react-icons/lu'
 import styles from './form.module.css'
 
 const formInfo = [
-
+    {input: true, type: "text", name: "name", id: "name", label: "Nome", for: "name"},
+    {input: true, type: "email", name: "email", id: "email", label: "Email", for: "email"},
+    {input: true, type: "text", name: "subject", id: "subject", label: "Assunto", for: "subject"},
+    {input: false, name: "content", id: "content", label: "Conteúdo", for: "content"}
 ]
 
 export default function Form() {
@@ -16,32 +19,29 @@ export default function Form() {
             initial={{opacity: 0, x: -40}}
             whileInView={{opacity: 1, x: 0}}
             transition={{delay: 1, duration: 1}}
-        action="">
+            action="">
 
-            <div className={styles.formInput}>
-                <input required type="text" id='name' placeholder='' name='name' />
-                <label htmlFor="name">Nome</label>
-            </div>
+            {formInfo.map((info) => (
+                <div className={styles.formInput}>
+                    {info.input
+                        ?
+                        <React.Fragment>
+                            <input placeholder='' type={info.type} name={info.name} id={info.id}  />
+                            <label htmlFor={info.for}>{info.label}</label>
+                        </React.Fragment>
 
-            <div className={styles.formInput}>
-                <input required type="email" id='email' placeholder='' name='email' />
-                <label htmlFor="name">Email</label>
-            </div>
-
-            <div className={styles.formInput}>
-                <input required type="text" id='subject' placeholder='' name='subject' />
-                <label htmlFor="subject">Assunto</label>
-            </div>
-
-            <div id='containerContent' className={styles.formInput}>
-                <textarea required placeholder='' name="content" id={styles.content}></textarea>
-                <label htmlFor="content">Conteúdo</label>
-            </div>
+                        :
+                        <React.Fragment>
+                            <textarea placeholder='' name="" id={styles.content}></textarea>
+                            <label htmlFor={info.for}>{info.label}</label>
+                        </React.Fragment>
+                    }
+                </div>
+            ))}
 
             <div className={styles.formInput}>
                 <button id={styles.formSubmit} type='submit'> <LuSend className={styles.formIcon} /> Enviar Menssagem</button>
             </div>
-
 
         </motion.form>
     )

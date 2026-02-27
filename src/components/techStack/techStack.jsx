@@ -1,47 +1,74 @@
 import React from 'react'
-
 import { motion } from 'framer-motion'
 
-import { LuCode, LuServer, LuComputer, LuSettings } from 'react-icons/lu'
+import { LuCode, LuComputer, LuSettings } from 'react-icons/lu'
 import { FaServer, FaDatabase, FaTools } from 'react-icons/fa'
 
 import './techStack.css'
 
-const frontend = [
-    { id: 1, tech: "JavaScript" },
-    { id: 2, tech: "React" },
-    { id: 3, tech: "CSS3" }
+const techSections = [
+    {
+        title: "Desenvolvimento de Aplicações",
+        items: [
+            {
+                title: "Frontend",
+                icon: LuCode,
+                techs: ["JavaScript", "React", "CSS3"]
+            },
+            {
+                title: "Backend",
+                icon: LuComputer,
+                techs: ["Node.js", "Python", "REST APIs"]
+            },
+            {
+                title: "Bancos de Dados",
+                icon: FaDatabase,
+                techs: ["SQL Server", "MariaDB", "MongoDB"]
+            }
+        ]
+    },
+    {
+        title: "Ferramentas, Plataformas & Deploy",
+        items: [
+            {
+                title: "Ferramentas",
+                icon: FaTools,
+                techs: ["VS Code", "Insomnia / Postman", "Figma"]
+            },
+            {
+                title: "Plataformas",
+                icon: FaServer,
+                techs: ["GitHub", "Google Cloud (GCP)", "Netlify"]
+            },
+            {
+                title: "Deploy & Versionamento",
+                icon: LuSettings,
+                techs: ["Git", "Docker", "Nginx"]
+            }
+        ]
+    }
 ]
 
-const backend = [
-    { id: 1, tech: "Node.js" },
-    { id: 2, tech: "Python" },
-    { id: 3, tech: "REST APIs" }
-]
+function TechCard({ title, icon: Icon, techs }) {
+    return (
+        <motion.div
+            className="tech"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+        >
+            <div className="techHeader">
+                <Icon className="graduationIcon" />
+                <h3>{title}</h3>
+            </div>
 
-const databases = [
-    { id: 1, tech: "SQL Server" },
-    { id: 2, tech: "MariaDB" },
-    { id: 3, tech: "MongoDB" }
-]
-
-const tools = [
-    { id: 1, tech: "VS Code" },
-    { id: 2, tech: "Insomnia / Postman" },
-    { id: 3, tech: "Figma" }
-]
-
-const platforms = [
-    { id: 1, tech: "GitHub" },
-    { id: 2, tech: "Google Cloud (GCP)" },
-    { id: 3, tech: "Netlify" }
-]
-
-const deployVers = [
-    { id: 1, tech: "Git" },
-    { id: 2, tech: "Docker" },
-    { id: 3, tech: "Nginx" }
-]
+            {techs.map((tech, index) => (
+                <p key={index}>{tech}</p>
+            ))}
+        </motion.div>
+    )
+}
 
 export default function TechStack() {
     return (
@@ -49,94 +76,51 @@ export default function TechStack() {
 
             <div className="techIntroduction">
                 <motion.h1
-                    initial={{opacity: 0}}
-                    whileInView={{opacity: 1}}
-                    transition={{delay: 0.5, duration: 2}}
-                >Habilidades & Tecnologias</motion.h1>
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                >
+                    Habilidades & Tecnologias
+                </motion.h1>
 
                 <motion.h4
-                    initial={{opacity: 0, y: -40}}
-                    whileInView={{opacity: 1, y: 0}}
-                    transition={{delay: 1, duration: 2}}
-                >Conjunto de tecnologias e ferramentas que utilizo para desenvolver
-                aplicações modernas, escaláveis e de alta performance.</motion.h4>
+                    initial={{ opacity: 0, y: -40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                >
+                    Conjunto de tecnologias e ferramentas que utilizo para desenvolver
+                    aplicações modernas, escaláveis e de alta performance.
+                </motion.h4>
             </div>
 
-            <div
-                className="stack">
+            <div className="stack">
+                {techSections.map((section, sectionIndex) => (
+                    <React.Fragment key={sectionIndex}>
 
-                <div className="sectionMessage">
-                    <motion.h2
-                        initial={{opacity: 0}}
-                        whileInView={{opacity: 1}}
-                        transition={{delay: 1, duration: 2}}
-                    >Desenvolvimento de Aplicações</motion.h2>
-                </div>
+                        <div className="sectionMessage">
+                            <motion.h2
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                            >
+                                {section.title}
+                            </motion.h2>
+                        </div>
 
-                <div className="frontend tech">
-                    <div className="techHeader">
-                        <LuCode className='graduationIcon' />
-                        <h3>Frontend</h3>
-                    </div>
-                    {frontend.map(tech => (
-                        <p key={tech.id}>{tech.tech}</p>
-                    ))}
-                </div>
+                        {section.items.map((item, index) => (
+                            <TechCard
+                                key={index}
+                                title={item.title}
+                                icon={item.icon}
+                                techs={item.techs}
+                            />
+                        ))}
 
-                <div className="backend tech">
-                    <div className="techHeader">
-                        <LuComputer className='graduationIcon' />
-                        <h3>Backend</h3>
-                    </div>
-                    {backend.map(tech => (
-                        <p key={tech.id}>{tech.tech}</p>
-                    ))}
-                </div>
-
-                <div className="databases tech">
-                    <div className="techHeader">
-                        <FaDatabase className='graduationIcon' />
-                        <h3>Bancos de Dados</h3>
-                    </div>
-                    {databases.map(tech => (
-                        <p key={tech.id}>{tech.tech}</p>
-                    ))}
-                </div>
-
-                <div className="sectionMessage">
-                    <h2>Ferramentas, Plataformas & Deploy</h2>
-                </div>
-
-                <div className="tools tech">
-                    <div className="techHeader">
-                        <FaTools className='graduationIcon' />
-                        <h3>Ferramentas</h3>
-                    </div>
-                    {tools.map(tech => (
-                        <p key={tech.id}>{tech.tech}</p>
-                    ))}
-                </div>
-
-                <div className="platforms tech">
-                    <div className="techHeader">
-                        <FaServer className='graduationIcon' />
-                        <h3>Plataformas</h3>
-                    </div>
-                    {platforms.map(tech => (
-                        <p key={tech.id}>{tech.tech}</p>
-                    ))}
-                </div>
-
-                <div
-                className="deployVers tech">
-                    <div className="techHeader">
-                        <LuSettings className='graduationIcon' />
-                        <h3>Deploy & Versionamento</h3>
-                    </div>
-                    {deployVers.map(tech => (
-                        <p key={tech.id}>{tech.tech}</p>
-                    ))}
-                </div>
+                    </React.Fragment>
+                ))}
             </div>
         </div>
     )

@@ -21,17 +21,17 @@ export default function Form() {
             transition={{delay: 1, duration: 1}}
             action="">
 
-            {formInfo.map((info) => (
-                <div className={styles.formInput}>
+            {formInfo.map((info, index) => (
+                <div key={index} className={styles.formInput}>
                     {info.input
                         ?
-                        <React.Fragment>
+                        <React.Fragment key={index}>
                             <input placeholder='' type={info.type} name={info.name} id={info.id}  />
                             <label htmlFor={info.for}>{info.label}</label>
                         </React.Fragment>
 
                         :
-                        <React.Fragment>
+                        <React.Fragment key={index}>
                             <textarea placeholder='' name="" id={styles.content}></textarea>
                             <label htmlFor={info.for}>{info.label}</label>
                         </React.Fragment>

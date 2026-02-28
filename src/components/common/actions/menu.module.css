@@ -1,0 +1,115 @@
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 135, 135);
+    transition: 600ms;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.hamburger:hover {
+    color: aqua;
+}
+
+.dialogWrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: #111;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.overlayEnter {
+    transition: opacity 0.9s ease;
+}
+
+.overlayEnterFrom {
+    opacity: 0;
+}
+
+.overlayEnterTo {
+    opacity: 1;
+}
+
+.overlayLeave {
+    transition: opacity 0.9s ease;
+}
+
+.overlayLeaveFrom {
+    opacity: 1;
+}
+
+.overlayLeaveTo {
+    opacity: 0;
+}
+
+.panelEnter {
+    transition: transform 1s ease;
+}
+
+.panelEnterFrom {
+    transform: translateX(100%);
+}
+
+.panelEnterTo {
+    transform: translateX(0);
+}
+
+.panelLeave {
+    transition: transform 1s ease;
+}
+
+.panelLeaveFrom {
+    transform: translateX(0);
+}
+
+.panelLeaveTo {
+    transform: translateX(100%);
+}
+
+.closeBtn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 135, 135);
+    transition: 600ms;
+}
+
+.closeBtn:hover {
+    color: aqua;
+}
+
+.menuLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.menuLinks a {
+    color: #f3737c;
+}
+
+.menuLinks a:hover {
+    color: #ad5158;
+    transform: translateY(-5px);
+}

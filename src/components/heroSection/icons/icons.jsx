@@ -49,7 +49,7 @@ export default function Icons({ isFooter }) {
         : <motion.div
             initial={{opacity: 0, left: "40%"}}
             whileInView={{opacity: 1, left: "50%"}}
-            transition={{delay: 0.5, duration: 3}}
+            transition={{delay: 0.5, duration: 2}}
             className={containerClass}>
 
             {socialData.map(social => (

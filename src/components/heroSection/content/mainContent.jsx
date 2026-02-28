@@ -27,7 +27,7 @@ export default function MainContent() {
                 <motion.h1
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
-                    transition={{delay: 0.5, duration: 3}}
+                    transition={{delay: 0.5, duration: 3, ease: "easeOut"}}
                 > {"<"} <span>{titles[index]}</span> {"/>"}</motion.h1>
             </div>
 
@@ -42,7 +42,7 @@ export default function MainContent() {
             <motion.div
                 initial={{opacity: 0, top: "61%"}}
                 whileInView={{opacity: 1, top: "51%"}}
-                transition={{delay: 0.5, duration: 2}}
+                transition={{delay: 0.5, duration: 2, ease: "easeOut"}}
 
                 className="mainContentText">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.

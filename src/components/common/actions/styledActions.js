@@ -7,12 +7,19 @@ const Div = styled.div`
         color: #f3737c;
         transition: 400ms;
         display: inline-flex;
-        gap: 20px;
     }
 
     a:hover {
         color: #ad5158;
         transform: translateY(-5px);
+    }
+
+
+    @media (max-width: 500px) {
+        a {
+            font-size: ${props => props.isNav ? '0px' : '16px'};
+            gap: 30px;
+        }
     }
 `
 

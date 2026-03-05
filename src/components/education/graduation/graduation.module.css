@@ -33,6 +33,11 @@
 
 }
 
+h3 {
+    color: white;
+    font-size: 20px;
+}
+
 .graduationInfo::before {
     content: "";
     clip-path: inherit;
@@ -72,6 +77,7 @@
     flex-wrap: wrap;
 }
 
+
 .graduationInfo p a {
     color: rgb(168, 168, 168);
     font-size: 30px;
@@ -79,6 +85,8 @@
     text-align: center;
     transition: 0.4s;
 }
+
+
 
 .graduationInfo p a:hover {
     color: grey;

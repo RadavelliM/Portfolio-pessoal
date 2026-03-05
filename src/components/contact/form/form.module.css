@@ -115,3 +115,20 @@ input:-webkit-autofill:active {
 #formSubmit:hover .formIcon {
     color:  aqua;
 }
+
+
+
+@media (max-width: 450px) {
+    input {
+        width: 300px;
+    }
+    #content {
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    #formSubmit {
+        width: 320px;
+        margin-bottom: 40px;
+    }
+}

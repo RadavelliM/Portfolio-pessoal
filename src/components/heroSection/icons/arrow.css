@@ -1,7 +1,7 @@
 .arrow {
     position: absolute;
     top: 85%;
-    left: 50%;
+    left: 47%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: sans-serif;
@@ -16,4 +16,10 @@
 
 .arrow:hover {
     color: #ad5158;
+}
+
+@media (max-width: 500px) {
+    .arrow {
+        top: 80%;
+    }
 }

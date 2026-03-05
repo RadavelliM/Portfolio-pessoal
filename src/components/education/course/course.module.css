@@ -16,6 +16,10 @@
     position: relative;
 }
 
+.coursesInfo {
+    font-size: 23px;
+}
+
 .courseBox {
     background-color: var(--graduationBG);
     height: 280px;

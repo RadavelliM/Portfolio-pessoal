@@ -9,7 +9,7 @@ import styles from './course.module.css';
 
 const coursesInfo = [
     {
-        name: "JavaScript, React.JS & TypeScript",
+        name: "JavaScript, React & TypeScript",
         platform: "Udemy",
         description: "Manipulação de DOM, async/await, consumo e criação de APIs REST.",
         situation: 'Em Progresso'
@@ -18,13 +18,6 @@ const coursesInfo = [
         name: "Git & GitHub",
         platform: "Udemy",
         description: "Controle de versão, branchs, versionamento, rebase, servidores e commits.",
-        certificate: 'Certificado',
-        link: 'https://www.youtube.com/'
-    },
-    {
-        name: "Docker",
-        platform: "Udemy",
-        description: "Containerização de aplicações Node.js e configuração de ambientes isolados.",
         certificate: 'Certificado',
         link: 'https://www.youtube.com/'
     }
@@ -50,7 +43,7 @@ export default function Courses() {
 
                 {coursesInfo.map((info, index) => (
                     <motion.div
-                     key={index} className={styles.courseBox}>
+                    key={index} className={styles.courseBox}>
 
                         <p>
                             <span className={styles.first}><FaBook className={iconClass} /></span>

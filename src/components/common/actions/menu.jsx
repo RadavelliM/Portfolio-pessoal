@@ -50,7 +50,7 @@ export default function NavMenu() {
                         leaveFrom={styles.panelLeaveFrom}
                         leaveTo={styles.panelLeaveTo}
                     >
-                        <div className={styles.offcanvas}>
+                        <Dialog.Panel className={styles.offcanvas}>
                             <button
                                 className={styles.closeBtn}
                                 onClick={() => setOpen(false)}
@@ -63,7 +63,7 @@ export default function NavMenu() {
                                     <a key={index} href={info.href} onClick={() => setOpen(false)}>{info.label}</a>
                                 ))}
                             </div>
-                        </div>
+                        </Dialog.Panel>
                     </Transition.Child>
                 </Dialog>
             </Transition>

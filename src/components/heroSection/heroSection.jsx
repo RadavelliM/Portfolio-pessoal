@@ -8,8 +8,6 @@ import Icons from './icons/icons';
 import ArrowDown from './icons/arrow';
 import MainContent from './content/mainContent';
 
-const getImages = document.querySelectorAll('img').forEach(img => img.setAttribute('draggable', 'false'))
-
 export default function HeroSection() {
 
     return (
@@ -19,7 +17,9 @@ export default function HeroSection() {
 
             <Icons />
 
-            <ArrowDown />
+            <div className="seta">
+                <ArrowDown />
+            </div>
 
         </div>
     )

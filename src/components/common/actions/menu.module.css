@@ -16,6 +16,15 @@
     position: fixed;
     inset: 0;
     z-index: 1000;
+    display: flex; /* Ajuda a posicionar o painel */
+    justify-content: flex-end;
+}
+
+.fixedContainer {
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    height: 100%;
 }
 
 .overlay {
@@ -28,7 +37,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 280px;
+    width: 220px;
     height: 100vh;
     background: #111;
     padding: 2rem;

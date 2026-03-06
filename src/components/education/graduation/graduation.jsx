@@ -50,7 +50,7 @@ export default function Graduation() {
                 {graduationInfos.map((info, index) => (
                     <p key={index}>
                         <span>{info.img}</span>
-                        <h3 className='titleinfo'>{info.title}</h3>
+                        <span className='titleinfo'>{info.title}</span>
                         {info.link ? <a href={info.link} target='_blank'>{info.txt}</a> : info.txt}
                     </p>
                 ))}

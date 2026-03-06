@@ -20,6 +20,7 @@ function FormField({ type, name, id, label }) {
                         name={name}
                         id={id}
                         placeholder=""
+                        autoComplete='off'
                     />
                     <label htmlFor={id}>{label}</label>
                 </>
@@ -27,10 +28,11 @@ function FormField({ type, name, id, label }) {
                 <>
                     <textarea
                         name={name}
-                        id={styles.content}
+                        className={styles.content}
+                        id={id}
                         placeholder=""
                     />
-                    <label htmlFor={id}>{label}</label>
+                    <label htmlFor={name}>{label}</label>
                 </>
             )}
         </div>

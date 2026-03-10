@@ -83,6 +83,7 @@ export default function Form() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1, duration: 1 }}
                 action=""
+                onSubmit={(e) => {handleSubmit(e)}}
             >
                 <input type="hidden" name="form-name" value="contato" />
 

@@ -55,8 +55,8 @@
 
 .tech {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 
     display: flex;
     flex-direction: column;
@@ -104,7 +104,7 @@
 .techHeader {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     margin-bottom: 10px;
     margin-top: -50px;
     font-size: 20px;

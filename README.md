@@ -27,7 +27,7 @@
 
 
 
-• Bibliotecas: react-icons, framer-motion, react-responsive, headlessUI
+• Bibliotecas: react-icons, framer-motion, react-responsive, headlessUI, react-typed
 
 <u></u>
 
@@ -38,6 +38,8 @@
 • Animações e transições suaves
 
 • Envio de mensagens para contato através de formulário
+
+• Download de currículo
 
 
 <u></u>

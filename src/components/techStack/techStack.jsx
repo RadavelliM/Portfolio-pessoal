@@ -41,7 +41,7 @@ const techSections = [
                 techs: ["GitHub", "Google Cloud (GCP)", "Netlify"]
             },
             {
-                title: "Deploy & Versionamento",
+                title: "Deploy",
                 icon: LuSettings,
                 techs: ["Git", "Docker", "Nginx"]
             }

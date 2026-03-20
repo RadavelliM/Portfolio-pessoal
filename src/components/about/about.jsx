@@ -59,6 +59,8 @@ export default function About() {
                 <p> <LuMapPin /> Joinville, SC - Brasil </p>
             </motion.address>
 
+            <DownloadButton  isAbout={false} />
+
         </div>
     )
 };

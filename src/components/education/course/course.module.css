@@ -22,8 +22,8 @@
 
 .courseBox {
     background-color: var(--graduationBG);
-    height: 280px;
-    width: 280px;
+    height: 250px;
+    width: 250px;
 
     display: inline-block;
 
@@ -33,7 +33,7 @@
     position: relative;
     transition: 0.6s;
 
-    font-size: 19px;
+    font-size: 18px;
     padding: 10px;
 
 }

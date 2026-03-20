@@ -37,6 +37,11 @@ img {
     color: aqua;
 }
 
+.mainText p {
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
 .mainContentText {
     position: absolute;
     top: 51%;
@@ -54,9 +59,25 @@ img {
         transform: translate(-50%, -80%);
     }
 
-    .mainText {
+    .mainText span{
         top: 26%;
     }
+}
+
+.typed-cursor {
+    color: white !important;
+    user-select: none;
+    font-size: 70px;
+
+    display: inline-block;
+    transform: translateY(-5px);
+
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @media (max-width: 800px) {
@@ -71,6 +92,10 @@ img {
     .mainText {
         font-size: 23px;
         width: 95%;
+    }
+
+    .typed-cursor {
+        font-size: 50px;
     }
 }
 

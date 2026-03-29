@@ -215,8 +215,16 @@ export default function Galaxy({
     let program;
 
     function resize() {
-        const scale = 1;
-        renderer.setSize(ctn.offsetWidth * scale, ctn.offsetHeight * scale);
+        const dpr = Math.min(window.devicePixelRatio, 1.5);
+
+        const width = ctn.offsetWidth;
+        const height = ctn.offsetHeight;
+
+        renderer.setSize(width * dpr, height * dpr);
+
+        gl.canvas.style.width = `${width}px`;
+        gl.canvas.style.height = `${height}px`;
+
         if (program) {
             program.uniforms.uResolution.value = new Color(
             gl.canvas.width,
@@ -224,9 +232,23 @@ export default function Galaxy({
             gl.canvas.width / gl.canvas.height
             );
         }
-        }
-        window.addEventListener('resize', resize, false);
-        resize();
+    }
+    resize()
+
+    function watchZoom() {
+        const dpr = window.devicePixelRatio;
+
+        const mqString = `(resolution: ${dpr}dppx)`;
+        const media = window.matchMedia(mqString);
+
+        const handleChange = () => {
+            resize();
+            watchZoom();
+        };
+
+        media.addEventListener('change', handleChange, { once: true });
+    }
+    watchZoom();
 
     const geometry = new Triangle(gl);
     program = new Program(gl, {

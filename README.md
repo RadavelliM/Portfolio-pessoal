@@ -32,6 +32,7 @@
 * Interação com a Hero Section
 * Envio de mensagens para contato através de formulário
 * Download de currículo
+* Visualização de projetos pessoais
 * Verificação de certificados
 
 

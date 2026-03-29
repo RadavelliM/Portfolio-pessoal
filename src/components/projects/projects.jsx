@@ -50,18 +50,28 @@ export default function Projects() {
     const project = projectsIteration[current]
 
     return (
-        <div className="projects">
+        <div className="projects" id='projects'>
 
-            <div className={styles.projectsMessage}>
+            <motion.div
+                className={styles.projectsMessage}
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 1, delay: 0.5}}
+            >
                 <h1>Projetos Desenvolvidos</h1>
 
                 <h2>Mostruário dos meus recentes trabalhos e habilidades técnicas</h2>
-            </div>
+            </motion.div>
 
-            <div className={styles.projectsArrowChangeSection}>
+            <motion.div
+                className={styles.projectsArrowChangeSection}
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{duration: 2, delay: 1}}
+            >
                 <FiArrowLeft className={styles.projectsArrow} onClick={() => {setCurrent(current - 1)}}/>
                 <FiArrowRight className={styles.projectsArrow} onClick={() => {setCurrent(current + 1)}}/>
-            </div>
+            </motion.div>
 
             <div className={styles.projectsVisualizer}>
                 <ProjectsCard

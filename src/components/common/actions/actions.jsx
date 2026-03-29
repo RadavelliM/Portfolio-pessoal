@@ -11,6 +11,7 @@ const navItems = [
   { label: "Formação", href: "#education" },
   { label: "Stack", href: "#techStack" },
   { label: "Idiomas", href: "#idioms" },
+  { label: "Projetos", href: "#projects" },
   { label: "Contato", href: "#contact" }
 ];
 

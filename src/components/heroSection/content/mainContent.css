@@ -1,13 +1,3 @@
-img {
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-    filter: brightness(25%);
-
-    display: inline-block;
-    transform: translateY(-77px);
-
-}
 
 .starterText {
     position: absolute;

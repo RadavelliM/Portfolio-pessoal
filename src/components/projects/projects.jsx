@@ -1,0 +1,105 @@
+import React, { useState } from 'react'
+
+import { motion } from 'framer-motion'
+
+import { FiArrowLeft, FiArrowRight, FiGithub } from 'react-icons/fi'
+
+import styles from './projects.module.css'
+
+import restauranteFlask from '../../assets/restaurante_flask.png'
+import gerenciamentoClientes from '../../assets/gerenciamentoClientes.png'
+import apiRest from '../../assets/api_rest.png'
+
+const projectsIteration = [
+    {
+        nome: 'Restaurante Flask',
+        img: restauranteFlask,
+        texto: "texto sobre o projeto",
+        link: 'https://github.com/RadavelliM/restarurante',
+        stack: ["HTML", "CSS", "JavaScript", "Python", "Flask", "SQL Server"]
+    },
+    {
+        nome: 'Gerenciamento de Clientes',
+        img: gerenciamentoClientes,
+        texto: "texto sobre o projeto",
+        link: 'https://github.com/RadavelliM/projeto-agenda',
+        stack: ["EJS", "CSS", "JavaScript", "Node.js", "Express", "MongoDB / Mongoose ODM"]
+    },
+    {
+        nome: 'API REST Universidade',
+        img: apiRest,
+        texto: "texto sobre o projeto",
+        link: 'https://github.com/RadavelliM/restarurante',
+        stack: ["Node.js", "Express", "MySQL", "Sequelize ORM", "GCP", "Docker / NGINX"]
+    }
+]
+
+function ProjectsCard({ nome, img, link, texto, stack }) {
+    return (
+        <motion.div
+            className={styles.cardContainer}
+            initial={{ opacity: 0, x: 75 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
+
+            <img src={img} alt={nome} className={styles.projectImg} />
+            <div className={styles.teste}>
+                <p className={styles.projectMainInfo}>{texto}</p>
+            </div>
+
+            <div className={styles.projectInfo}>
+                <h1 className={styles.projectName}>{nome}</h1>
+
+                <div className={styles.viewCode}>
+                    <a href={link} target='_blank'> <FiGithub/> Ver Código </a>
+                </div>
+            </div>
+
+            <div className={styles.projectStack}>
+                {stack.map((info, index) => (
+                    <div className={styles}>{info}</div>
+                ))}
+            </div>
+
+        </motion.div>
+    )
+}
+
+export default function Projects() {
+    let [current, setCurrent] = useState(0);
+
+    if (current === projectsIteration.length) setCurrent(current = 0)
+    if (current < 0) setCurrent(current = (projectsIteration.length - 1))
+
+    const project = projectsIteration[current]
+
+    return (
+        <div className="projects">
+
+            <div className={styles.projectsMessage}>
+                <h1>Projetos Desenvolvidos</h1>
+
+                <h2>alguma mensagem sobre os projetos</h2>
+            </div>
+
+            <div className={styles.projectsArrowChangeSection}>
+                <FiArrowLeft className={styles.projectsArrow} onClick={() => {setCurrent(current - 1)}}/>
+                <FiArrowRight className={styles.projectsArrow} onClick={() => {setCurrent(current + 1)}}/>
+            </div>
+
+            <div className={styles.projectsVisualizer}>
+                <ProjectsCard
+                    key={project.nome}
+                    img={project.img}
+                    nome={project.nome}
+                    link={project.link}
+                    texto={project.texto}
+                    stack={project.stack}
+                />
+            </div>
+
+        </div>
+    )
+};

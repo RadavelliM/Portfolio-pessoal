@@ -1,0 +1,161 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+.projectsMessage {
+    text-align: center;
+    font-size: 25px;
+}
+
+.projectsArrowChangeSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 50px 0 50px;
+}
+
+
+.projectsArrow {
+    color: var(--letterColorMain);
+    font-size: 40px;
+
+    margin-top: 100px;
+
+    transition: 600ms;
+}
+
+.projectsArrow:hover {
+    color: var(--letterColorAction);
+}
+
+.projectsVisualizer img {
+    width: 100%;
+    height: 450px;
+    margin-top: -35px;
+
+
+    transition: 500ms;
+
+    user-select: none;
+    position: relative;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+.cardContainer {
+    display: grid;
+    place-self: center;
+    width: 750px;
+    height: 600px;
+
+    background-color: var(--graduationBG);
+
+    border-radius: 15px;
+    border: 3px solid var(--letterColorMain);
+
+    margin-top: -120px;
+
+}
+
+.cardContainer:hover {
+    border: 3px solid transparent;
+    background:
+        linear-gradient(var(--graduationBG)) padding-box,
+        linear-gradient(
+            90deg,
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        )
+}
+
+.cardContainer img {
+    display: grid;
+    place-self: center;
+}
+
+.cardContainer:hover img {
+    filter: blur(8px);
+}
+
+.projectInfo {
+    margin-top: -115px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 100px 0 100px;
+}
+
+.viewCode a{
+    padding: 0 20px 0 20px;
+}
+
+.viewCode a {
+    color: var(--letterColorMain);
+    background-color: var(--iconBG);
+    padding: 7px;
+    border-radius: 7px;
+    display: inline-block;
+    transition: 500ms;
+}
+
+.viewCode a:hover {
+    transform: translateY(-10px);
+}
+
+
+.projectName {
+    color: white;
+}
+
+.teste {
+    display: grid;
+    place-self: center;
+    position: absolute;
+    opacity: 0;
+    transition: 500ms;
+}
+
+.cardContainer:hover .teste {
+    animation: changeText 2s 1 forwards;
+}
+
+@keyframes changeText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.projectMainInfo {
+    color: black;
+    text-align: center;
+}
+
+.projectStack {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px 0 40px;
+
+}
+
+.projectStack div{
+    background-color: var(--iconBG);
+    color: var(--letterColorAction);
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.stackInfo {
+    color: white;
+}

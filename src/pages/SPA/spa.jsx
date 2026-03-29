@@ -8,6 +8,7 @@ import About from '../../components/about/about'
 import Education from '../../components/education/education'
 import Contact from '../../components/contact/contact'
 import Languages from '../../components/languages/languages'
+import Projects from '../../components/projects/projects'
 import Footer from '../../components/footer/footer'
 
 export default function SPA() {
@@ -30,6 +31,8 @@ export default function SPA() {
             <TechStack />
             <DivisorSpace space="300px"/>
             <Languages />
+            <DivisorSpace space="100px"/>
+            <Projects/>
             <DivisorSpace space="200px"/>
             <Contact />
             <DivisorSpace space="200px"/>

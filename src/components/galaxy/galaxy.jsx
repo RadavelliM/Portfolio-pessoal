@@ -215,7 +215,7 @@ export default function Galaxy({
     let program;
 
     function resize() {
-        const dpr = Math.min(window.devicePixelRatio, 1.5);
+        const dpr = Math.min(window.devicePixelRatio, 1);
 
         const width = ctn.offsetWidth;
         const height = ctn.offsetHeight;

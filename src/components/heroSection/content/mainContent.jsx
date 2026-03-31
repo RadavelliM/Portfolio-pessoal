@@ -21,10 +21,10 @@ export default function MainContent() {
             <Galaxy
                 mouseRepulsion
                 mouseInteraction
-                density={1}
+                density={0.5}
                 glowIntensity={0.3}
                 saturation={0}
-                hueShift={140}
+                hueShift={40}
                 twinkleIntensity={0.3}
                 rotationSpeed={0.1}
                 repulsionStrength={2}

@@ -7,7 +7,13 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "./form.module.css";
-import formFields from "./form";
+
+const formFields = [
+    { type: "text", name: "name", id: "name", label: "Nome" },
+    { type: "email", name: "email", id: "email", label: "Email" },
+    { type: "text", name: "subject", id: "subject", label: "Assunto" },
+    { type: "textarea", name: "content", id: "content", label: "Conteúdo" }
+];
 
 function FormField({ type, name, id, label }) {
     return (

@@ -9,7 +9,7 @@ import Education from "../../components/education/education";
 import Contact from "../../components/contact/contact";
 import Languages from "../../components/languages/languages";
 import Projects from "../../components/projects/projects";
-import SoftSkills from "../../ui/skills/softskills";
+import SoftSkills from "../../components/skills/softskills";
 import Footer from "../../components/footer/footer";
 
 export default function SPA() {

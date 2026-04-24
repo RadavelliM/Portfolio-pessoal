@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { LuCode, LuComputer, LuSettings } from "react-icons/lu";
 import { FaServer, FaDatabase, FaTools } from "react-icons/fa";
+import BorderGlow from "./hoverComponent";
 
 import "./techStack.css";
 
@@ -52,14 +53,14 @@ const techSections = [
 function TechCard({ title, icon: Icon, techs }) {
     return (
         <motion.div
-            className="tech"
+            className="skilltech"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
         >
             <div className="techHeader">
-                <Icon className="graduationIcon" />
+                <Icon className="icon" />
                 <h3>{title}</h3>
             </div>
 
@@ -110,12 +111,28 @@ export default function TechStack() {
                         </div>
 
                         {section.items.map((item, index) => (
-                            <TechCard
-                                key={index}
-                                title={item.title}
-                                icon={item.icon}
-                                techs={item.techs}
-                            />
+                            <div className="glowingCardTechStack">
+                                <BorderGlow
+                                    edgeSensitivity={0}
+                                    glowColor="80 80 80"
+                                    backgroundColor="#120F17"
+                                    borderRadius={30}
+                                    glowRadius={80}
+                                    glowIntensity={1}
+                                    coneSpread={45}
+                                    animated
+                                    colors={["#c084fc", "#f472b6", "#38bdf8"]}
+                                >
+                                    <div className="index">
+                                        <TechCard
+                                            key={index}
+                                            title={item.title}
+                                            icon={item.icon}
+                                            techs={item.techs}
+                                        />
+                                    </div>
+                                </BorderGlow>
+                            </div>
                         ))}
                     </React.Fragment>
                 ))}

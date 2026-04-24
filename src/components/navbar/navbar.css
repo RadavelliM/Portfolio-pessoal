@@ -33,12 +33,7 @@ nav:hover {
     border: 2px solid transparent;
     background:
         linear-gradient(var(--navbarBG)) padding-box,
-        linear-gradient(
-            90deg,
-            rgb(189, 34, 255) 0%,
-            rgba(9, 9, 121, 1) 35%,
-            rgb(123, 0, 255) 100%
-        );
+        linear-gradient(90deg, #bd22ff 0%, #090979 35%, #7b00ff 100%);
 }
 
 nav .brand {

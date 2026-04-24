@@ -43,7 +43,7 @@ const techSections = [
             {
                 title: "Deploy",
                 icon: LuSettings,
-                techs: ["Git", "Docker", "Nginx"]
+                techs: ["Git", "Docker", "NGINX"]
             }
         ]
     }

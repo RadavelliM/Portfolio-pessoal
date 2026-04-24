@@ -7,7 +7,7 @@ import Actions from "../../ui/actions/actions";
 import NavMenu from "../menu/menu";
 
 export default function Navbar({ isNotFound }) {
-    const isCollapsed = useMediaQuery({ query: "(max-width: 900px)" });
+    const isCollapsed = useMediaQuery({ query: "(max-width: 1080px)" });
 
     return (
         <nav id="home" className="navbar">

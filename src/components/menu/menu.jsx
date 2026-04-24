@@ -9,10 +9,10 @@ import styles from "./menu.module.css";
 const navItems = [
     { label: "Início", href: "#home" },
     { label: "Sobre", href: "#about" },
-    { label: "Formação", href: "#education" },
     { label: "Skills", href: "#techStack" },
-    { label: "Idiomas", href: "#idioms" },
     { label: "Projetos", href: "#projects" },
+    { label: "Formação", href: "#education" },
+    { label: "Soft Skills", href: "#softSkills" },
     { label: "Contato", href: "#contact" }
 ];
 

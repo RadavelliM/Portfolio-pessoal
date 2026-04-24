@@ -23,16 +23,16 @@ export default function SPA() {
             <HeroSection />
             <DivisorSpace space="200px" />
             <About />
-            <DivisorSpace space="200px" />
-            <Education />
             <DivisorSpace space="400px" />
             <TechStack />
+            <DivisorSpace space="100px" />
+            <Projects />
+            <DivisorSpace space="200px" />
+            <Education />
             <DivisorSpace space="200px" />
             <SoftSkills />
             <DivisorSpace space="300px" />
             <Languages />
-            <DivisorSpace space="100px" />
-            <Projects />
             <DivisorSpace space="200px" />
             <Contact />
             <DivisorSpace space="200px" />

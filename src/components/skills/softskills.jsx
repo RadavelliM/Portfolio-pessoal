@@ -13,6 +13,7 @@ export default function SoftSkills() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1 }}
             className="softskills"
+            id="softSkills"
         >
             <div className={styles.skillsinfo}>
                 <h1 className={styles.skillsTitle}>Soft Skills</h1>

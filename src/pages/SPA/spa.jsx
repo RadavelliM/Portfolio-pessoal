@@ -18,7 +18,7 @@ export default function SPA() {
     }, []);
 
     return (
-        <div className="container">
+        <main className="container">
             <Navbar />
             <HeroSection />
             <DivisorSpace space="200px" />
@@ -37,6 +37,6 @@ export default function SPA() {
             <Contact />
             <DivisorSpace space="200px" />
             <Footer />
-        </div>
+        </main>
     );
 }

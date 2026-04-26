@@ -9,10 +9,10 @@ export default function NotFound() {
     }, []);
 
     return (
-        <div className="PageNotFound">
+        <main className="PageNotFound">
             <Navbar isNotFound={true} />
 
             <NotFoundContent />
-        </div>
+        </main>
     );
 }

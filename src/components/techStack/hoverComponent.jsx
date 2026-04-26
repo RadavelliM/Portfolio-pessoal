@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect } from "react";
+import { useRef, useCallback, useEffect, useState } from "react";
 import "./BorderGlow.css";
 
 function parseHSL(hslStr) {
@@ -97,6 +97,7 @@ const BorderGlow = ({
     fillOpacity = 0.5
 }) => {
     const cardRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     const getCenterOfElement = useCallback((el) => {
         const { width, height } = el.getBoundingClientRect();
@@ -155,6 +156,25 @@ const BorderGlow = ({
     useEffect(() => {
         if (!animated || !cardRef.current) return;
         const card = cardRef.current;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            {
+                threshold: 0.1
+            }
+        );
+
+        observer.observe(card);
+        return () => observer.disconnect();
+    }, [animated]);
+
+    useEffect(() => {
+        if (!animated || !isVisible || !cardRef.current) return;
+        const card = cardRef.current;
         const angleStart = 110;
         const angleEnd = 465;
         card.classList.add("sweep-active");
@@ -197,7 +217,7 @@ const BorderGlow = ({
             onUpdate: (v) => card.style.setProperty("--edge-proximity", v),
             onEnd: () => card.classList.remove("sweep-active")
         });
-    }, [animated]);
+    }, [animated, isVisible]);
 
     const glowVars = buildGlowVars(glowColor, glowIntensity);
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { LuCode, LuComputer, LuSettings } from "react-icons/lu";
 import { FaServer, FaDatabase, FaTools } from "react-icons/fa";
-import BorderGlow from "./hoverComponent";
+import BorderGlow from "../../ui/borderGlow/hoverComponent";
 
 import "./techStack.css";
 

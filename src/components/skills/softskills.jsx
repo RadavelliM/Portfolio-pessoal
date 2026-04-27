@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import styles from "./softskills.module.css";
-import Skills from "./skills";
+import Skills from "../../ui/cardGrid/skills";
 
 export default function SoftSkills() {
     return (

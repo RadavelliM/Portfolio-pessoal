@@ -500,22 +500,6 @@ const BentoCardGrid = ({ children, gridRef }) => (
     </div>
 );
 
-const useMobileDetection = () => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () =>
-            setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
-
-        checkMobile();
-        window.addEventListener("resize", checkMobile);
-
-        return () => window.removeEventListener("resize", checkMobile);
-    }, []);
-
-    return isMobile;
-};
-
 const Skills = ({
     textAutoHide = true,
     enableStars = true,
@@ -530,8 +514,7 @@ const Skills = ({
     enableMagnetism = true
 }) => {
     const gridRef = useRef(null);
-    const isMobile = useMobileDetection();
-    const shouldDisableAnimations = disableAnimations || isMobile;
+    const shouldDisableAnimations = disableAnimations;
 
     return (
         <div className="SkillsCard">

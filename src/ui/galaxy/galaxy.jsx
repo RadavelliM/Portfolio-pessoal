@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import "./galaxy.css";
-import MainContent from "../heroSection/content/mainContent";
+import MainContent from "../../components/heroSection/content/mainContent";
 
 const vertexShader = `
 attribute vec2 uv;

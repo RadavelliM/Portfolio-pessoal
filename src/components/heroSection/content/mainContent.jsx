@@ -3,9 +3,7 @@ import { motion } from "framer-motion";
 
 import { ReactTyped } from "react-typed";
 
-import Galaxy from "../../galaxy/galaxy";
-
-import digital from "../../../assets/digital.png";
+import Galaxy from "../../../ui/galaxy/galaxy";
 
 import "./mainContent.css";
 

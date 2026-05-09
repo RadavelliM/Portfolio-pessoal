@@ -1,16 +1,23 @@
 import React, { useEffect, Suspense } from "react";
 
+const Loader = React.lazy(() => import("../../ui/loader/loader"));
+
 import DivisorSpace from "../../ui/divisorSpace/divisorSpace";
 import Navbar from "../../components/navbar/navbar";
 import HeroSection from "../../components/heroSection/heroSection";
-import TechStack from "../../components/techStack/techStack";
 import About from "../../components/about/about";
-import Education from "../../components/education/education";
-import Contact from "../../components/contact/contact";
-import Languages from "../../components/languages/languages";
+import TechStack from "../../components/techStack/techStack";
 import Projects from "../../components/projects/projects";
-import SoftSkills from "../../components/skills/softskills";
-import Footer from "../../components/footer/footer";
+import Education from "../../components/education/education";
+
+const SoftSkills = React.lazy(
+    () => import("../../components/skills/softskills")
+);
+const Languages = React.lazy(
+    () => import("../../components/languages/languages")
+);
+const Contact = React.lazy(() => import("../../components/contact/contact"));
+const Footer = React.lazy(() => import("../../components/footer/footer"));
 
 export default function SPA() {
     useEffect(() => {
@@ -32,13 +39,22 @@ export default function SPA() {
             <DivisorSpace space="200px" />
             <Education />
             <DivisorSpace space="200px" />
-            <SoftSkills />
+
+            <Suspense fallback={<Loader />}>
+                <SoftSkills />
+            </Suspense>
             <DivisorSpace space="300px" />
-            <Languages />
+            <Suspense fallback={<Loader />}>
+                <Languages />
+            </Suspense>
             <DivisorSpace space="200px" />
-            <Contact />
+            <Suspense fallback={<Loader />}>
+                <Contact />
+            </Suspense>
             <DivisorSpace space="200px" />
-            <Footer />
+            <Suspense fallback={<Loader />}>
+                <Footer />
+            </Suspense>
         </main>
     );
 }

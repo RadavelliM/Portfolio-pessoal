@@ -16,7 +16,12 @@ function ProjectsCard({ nome, img, link, texto, stack }) {
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-            <img src={img} alt={nome} className={styles.projectImg} />
+            <img
+                src={img}
+                alt={nome}
+                loading="lazy"
+                className={styles.projectImg}
+            />
 
             <div className={styles.infoText}>
                 <p className={styles.projectMainInfo}>{texto}</p>

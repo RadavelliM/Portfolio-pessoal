@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import SPA from "./pages/SPA/spa";
-import NotFound from "./pages/notFound/notFoundMount";
+const SPA = React.lazy(() => import("./pages/SPA/spa"));
+const NotFound = React.lazy(() => import("./pages/notFound/notFoundMount"));
+const Loader = React.lazy(() => import("./ui/loader/loader"));
 
 export default function App() {
     useEffect(() => {
@@ -22,10 +23,12 @@ export default function App() {
 
     return (
         <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<SPA />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<Loader />}>
+                <Routes>
+                    <Route path="/" element={<SPA />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Suspense>
         </BrowserRouter>
     );
 }

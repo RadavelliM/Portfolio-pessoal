@@ -7,7 +7,7 @@
 
 <u></u>
 
-# 🚀 Tecnologias
+## 🚀 Tecnologias
 
 * React
 * Vite

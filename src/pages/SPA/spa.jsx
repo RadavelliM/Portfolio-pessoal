@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 
 import DivisorSpace from "../../ui/divisorSpace/divisorSpace";
 import Navbar from "../../components/navbar/navbar";
@@ -20,7 +20,9 @@ export default function SPA() {
     return (
         <main className="container">
             <Navbar />
-            <HeroSection />
+            <Suspense fallback={<div>Carregando...</div>}>
+                <HeroSection />
+            </Suspense>
             <DivisorSpace space="200px" />
             <About />
             <DivisorSpace space="400px" />

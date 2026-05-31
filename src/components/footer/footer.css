@@ -7,32 +7,34 @@ footer {
     position: relative;
     background-color: var(--navbarBG);
     color: white;
-    height: 250px;
+    height: 570px;
     text-align: center;
     border-top: 3px solid var(--letterColorMain);
     transition: 600ms;
-    padding: 30px;
+    padding: 30px !important;
 }
 
 footer:hover {
     border-top: 3px solid var(--letterColorAction);
 }
 
-footer .icons {
-    margin-top: -110px;
+footer .iconsFooter {
+    margin-top: -80px;
 }
 
 footer .navActions {
     margin-top: 140px;
 }
 
-.development {
-    font-size: 18px;
+footer .logo {
+    margin-top: 50px;
+    width: 20%;
+    height: 20%;
 }
 
 .msg {
     position: relative;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .msg .rights {
@@ -43,10 +45,5 @@ footer .navActions {
 @media (max-width: 500px) {
     .msg .rights {
         margin-top: 15px;
-    }
-}
-@media (max-width: 800px) {
-    footer {
-        height: 300px;
     }
 }

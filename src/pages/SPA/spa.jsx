@@ -21,7 +21,7 @@ const Footer = React.lazy(() => import("../../components/footer/footer"));
 
 export default function SPA() {
     useEffect(() => {
-        window.document.title = "Portfólio";
+        window.document.title = "Portfólio Henrique";
     }, []);
 
     return (

@@ -4,10 +4,9 @@ import "./footer.css";
 import Icons from "../../ui/icons/icons";
 import Actions from "../../ui/actions/actions";
 
-function currentYear() {
-    const data = new Date();
-    return data.getFullYear();
-}
+import logo from "../../assets/portfolio_logo_imagem_png.png";
+
+const currentYear = () => new Date().getFullYear();
 
 export default function Footer() {
     return (
@@ -21,6 +20,8 @@ export default function Footer() {
                 <h3 className="rights">
                     Henrique Radavelli Machado - {currentYear()}
                 </h3>
+                <h3 className="rights">© Todos os direitos reservados</h3>
+                <img className="logo" src={logo} loading="lazy" alt="" />
             </div>
         </footer>
     );

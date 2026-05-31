@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 
 import { LuMapPin } from "react-icons/lu";
 import { motion } from "framer-motion";
